@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Wikipedia Ratings Blocker",
+  "description": "This plugin blocks album ratings on Wikipedia English music album pages",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.ico",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+      {
+          "matches": [ "*://en.wikipedia.org/*" ],
+          "js": [ "main.js" ],
+          "run_at": "document_end"
+      }
+  ]
+}
